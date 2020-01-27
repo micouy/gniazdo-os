@@ -31,7 +31,6 @@ run : os-image
 
 debug : os-image kernel.elf
 	${QEMU} -s -fda os-image &
-	sleep 1
 	${GDB} \
 		-ex "set arch i386" \
 		-ex "symbol-file kernel.elf" \
