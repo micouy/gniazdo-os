@@ -2,3 +2,8 @@
 **/*.bin
 **/*.elf
 os-image
+
+
+#Added by cargo
+
+/target
