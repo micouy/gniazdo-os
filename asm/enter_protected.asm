@@ -1,11 +1,17 @@
 [bits 16]
 enter_protected:
     cli
+
+    ; load global descriptor table
     lgdt [gdt_desc]
+
+    ; set protected mode flag
     mov eax, cr0
     or eax, 0x1
     mov cr0, eax
-    mov ax, CODE_SEG
+
+	; ???
+    ; mov ax, CODE_SEG
     jmp CODE_SEG:init_protected
 
 [bits 32]
@@ -21,6 +27,5 @@ init_protected:
     ; update the stack right at the top of the free space
     mov ebp, 0x90000
     mov esp, ebp
-    
-    jmp protected_mode
-    
+
+    jmp boot_pm

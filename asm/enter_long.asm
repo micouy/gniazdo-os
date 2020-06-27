@@ -87,4 +87,4 @@ init_long:
     mov fs, ax                    ; Set the F-segment to the A-register.
     mov gs, ax                    ; Set the G-segment to the A-register.
     mov ss, ax                    ; Set the stack segment to the A-register.
-    jmp long_mode
+    jmp boot_lm
