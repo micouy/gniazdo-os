@@ -1,9 +1,6 @@
 **/*.o
 **/*.bin
 **/*.elf
-os-image
+**/.DS_Store
 
-
-#Added by cargo
-
-/target
+rust/target
