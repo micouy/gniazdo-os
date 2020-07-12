@@ -31,7 +31,8 @@ enter_long:
 
     mov ebx, 0b11 ; flags
     mov ecx, 512
-.set_entry:
+    ; identity map first MB
+    .set_entry:
     mov dword [edi], ebx
     add ebx, 0x1000
     add edi, 8

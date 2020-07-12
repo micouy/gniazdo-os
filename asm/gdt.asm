@@ -5,7 +5,7 @@ gdt_null:
     dq 0x0
 
 gdt_code:
-    dw 0xFFFF ; size
+    dw 0xFFFF ; length
     dw 0x0 ; base 0-15
     db 0x0 ; base 16-23
     ; 7 - present flag

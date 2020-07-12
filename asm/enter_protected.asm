@@ -10,8 +10,6 @@ enter_protected:
     or eax, 0x1
     mov cr0, eax
 
-	; ???
-    ; mov ax, CODE_SEG
     jmp CODE_SEG:init_protected
 
 [bits 32]
